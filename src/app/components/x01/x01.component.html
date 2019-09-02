@@ -1,0 +1,55 @@
+<div class="container">
+  <h1>X01</h1>
+
+  <mat-form-field>
+    <mat-label>Style de jeu</mat-label>
+    <mat-select [formControl]="gameStyle">
+      <mat-option *ngFor="let style of styles" [value]="style.value">{{style.viewValue}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <span>Score : {{scoreToBeat}}</span>
+  <span *ngIf="scoreToBeat === 0">Win !</span>
+  <button (click)="consoleLog()">consolelog</button>
+
+  <div class="button-container">
+    <div class="button-list">
+      <button mat-button (click)="soustractValue(1)">1</button>
+      <button mat-button (click)="soustractValue(2)">2</button>
+      <button mat-button (click)="soustractValue(3)">3</button>
+      <button mat-button (click)="soustractValue(4)">4</button>
+      <button mat-button (click)="soustractValue(5)">5</button>
+    </div>
+    <div class="button-list">
+      <button mat-button (click)="soustractValue(6)">6</button>
+      <button mat-button (click)="soustractValue(7)">7</button>
+      <button mat-button (click)="soustractValue(8)">8</button>
+      <button mat-button (click)="soustractValue(9)">9</button>
+      <button mat-button (click)="soustractValue(10)">10</button>
+    </div>
+    <div class="button-list">
+      <button mat-button (click)="soustractValue(11)">11</button>
+      <button mat-button (click)="soustractValue(12)">12</button>
+      <button mat-button (click)="soustractValue(13)">13</button>
+      <button mat-button (click)="soustractValue(14)">14</button>
+      <button mat-button (click)="soustractValue(15)">15</button>
+    </div>
+    <div class="button-list">
+      <button mat-button (click)="soustractValue(16)">16</button>
+      <button mat-button (click)="soustractValue(17)">17</button>
+      <button mat-button (click)="soustractValue(18)">18</button>
+      <button mat-button (click)="soustractValue(19)">19</button>
+      <button mat-button (click)="soustractValue(20)">20</button>
+    </div>
+    <div class="button-list">
+      <button mat-button (click)="soustractValue(25)">25</button>
+      <button mat-button (click)="soustractValue(50)">50</button>
+    </div>
+    <div>
+      <button mat-button class="button-list">Double</button>
+      <button mat-button class="button-list">Triple</button>
+    </div>
+  </div>
+
+</div>
+

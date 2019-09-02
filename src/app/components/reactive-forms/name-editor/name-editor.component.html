@@ -1,0 +1,7 @@
+<mat-form-field>
+  <input matInput type="text" placeholder="Name" [formControl]="name">
+</mat-form-field>
+
+<button mat-button (click)="updateName()">Update Name</button>
+
+<span>Name : {{name.value}}</span>
