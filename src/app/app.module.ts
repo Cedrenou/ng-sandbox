@@ -7,7 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './components/home/home.component';
 import {NotFoundComponent} from './components/not-found/not-found.component';
 import {
-  MatButtonModule,
+  MatButtonModule, MatExpansionModule,
   MatFormFieldModule,
   MatInputModule,
   MatListModule,
@@ -21,6 +21,7 @@ import { ReactiveFormsComponent } from './components/reactive-forms/reactive-for
 import { NameEditorComponent } from './components/reactive-forms/name-editor/name-editor.component';
 import { ProfileEditorComponent } from './components/reactive-forms/profile-editor/profile-editor.component';
 import { ApiConnectComponent } from './components/api-connect/api-connect.component';
+import { DebugFormComponent } from './components/shared/debug-form/debug-form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ApiConnectComponent } from './components/api-connect/api-connect.compon
     ReactiveFormsComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    ApiConnectComponent
+    ApiConnectComponent,
+    DebugFormComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { ApiConnectComponent } from './components/api-connect/api-connect.compon
     MatFormFieldModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
