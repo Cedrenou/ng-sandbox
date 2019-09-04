@@ -10,7 +10,7 @@ import {
   MatButtonModule, MatExpansionModule,
   MatFormFieldModule,
   MatInputModule,
-  MatListModule,
+  MatListModule, MatRadioModule,
   MatSelectModule,
   MatSidenavModule, MatTableModule,
   MatToolbarModule
@@ -56,7 +56,8 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     MatInputModule,
     MatExpansionModule,
-    MatTableModule
+    MatTableModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

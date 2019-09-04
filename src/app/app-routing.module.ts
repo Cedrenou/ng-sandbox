@@ -5,6 +5,7 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 import {X01Component} from './components/x01/x01.component';
 import {ReactiveFormsComponent} from './components/reactive-forms/reactive-forms.component';
 import {FormArrayComponent} from './components/form-array/form-array.component';
+import {ApiConnectComponent} from './components/api-connect/api-connect.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'x01', component: X01Component},
   {path: 'reactive-forms', component: ReactiveFormsComponent},
   {path: 'form-array', component: FormArrayComponent},
+  {path: 'api-connect', component: ApiConnectComponent},
   {path: '**', component: NotFoundComponent}
 ];
 

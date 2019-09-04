@@ -1,4 +1,4 @@
-<h1>Angular material table with formArray inside</h1>
+<h1>Angular material table with formArray</h1>
 
 <form [formGroup]="form">
   <ng-container formArrayName="albums">
@@ -19,6 +19,10 @@
               <mat-option *ngFor="let user of users" [value]="user.id">{{user.username}}</mat-option>
             </mat-select>
           </mat-form-field>
+
+          <mat-radio-button (change)="radioChangeHandler($event)" value="1" ></mat-radio-button>
+
+
         </td>
       </ng-container>
 
@@ -29,6 +33,9 @@
           <mat-form-field floatLabel="never" *ngIf="element.get('userId').value !== 3">
             <input matInput placeholder="Title" formControlName="title" required>
           </mat-form-field>
+
+          <mat-radio-button  (change)="radioChangeHandler($event)" value="2"></mat-radio-button>
+
         </td>
       </ng-container>
 
@@ -38,5 +45,8 @@
     </table>
   </ng-container>
 </form>
+
+
+<span>Vous avez selectionner la formule {{selectedFormule}}</span>
 
 <app-debug-form [form]="albums"></app-debug-form>

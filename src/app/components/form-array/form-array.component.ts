@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormArrayService} from '../../service/form-array-service/form-array.service';
-import {Album} from '../../models/album.model';
 import {FormArray, FormBuilder, FormGroup} from '@angular/forms';
 import {UserService} from '../../service/form-array-service/user.service';
 import {User} from '../../models/user.model';
@@ -14,6 +13,7 @@ export class FormArrayComponent implements OnInit {
 
   form: FormGroup;
   users: User[] = [];
+  selectedFormule = 0;
 
   displayedColumns: string[] = ['id', 'userId', 'title'];
 
@@ -24,7 +24,7 @@ export class FormArrayComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.fb.group({
-      albums: this.fb.array([])
+      albums: this.fb.array([]),
     });
     this.formArrayService.getAllAsFormArray().subscribe(albums => {
       this.form.setControl('albums', albums);
@@ -43,6 +43,11 @@ export class FormArrayComponent implements OnInit {
 
     title.setValue(null);
     title.markAsUntouched();
+  }
+
+  radioChangeHandler(event: any) {
+    this.selectedFormule = event.value;
+    console.log('selectedFormule', this.selectedFormule);
   }
 
 }
