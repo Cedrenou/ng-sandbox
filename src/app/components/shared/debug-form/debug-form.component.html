@@ -1,8 +1,3 @@
-<mat-accordion>
-  <mat-expansion-panel>
-    <mat-expansion-panel-header>
-      <mat-panel-title>Form Value</mat-panel-title>
-    </mat-expansion-panel-header>
-    <pre>{{form.value | json}}</pre>
-  </mat-expansion-panel>
-</mat-accordion>
+<app-expansion-panel [title]="'Form Value'" [description]="'Valeur du formmulaire'">
+  <pre>{{form.value | json}}</pre>
+</app-expansion-panel>

@@ -12,9 +12,10 @@ import {
   MatInputModule,
   MatListModule,
   MatSelectModule,
-  MatSidenavModule,
+  MatSidenavModule, MatTableModule,
   MatToolbarModule
 } from '@angular/material';
+
 import { X01Component } from './components/x01/x01.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
@@ -22,6 +23,10 @@ import { NameEditorComponent } from './components/reactive-forms/name-editor/nam
 import { ProfileEditorComponent } from './components/reactive-forms/profile-editor/profile-editor.component';
 import { ApiConnectComponent } from './components/api-connect/api-connect.component';
 import { DebugFormComponent } from './components/shared/debug-form/debug-form.component';
+import { ExpansionPanelComponent } from './components/shared/expansion-panel/expansion-panel.component';
+import { FormArrayComponent } from './components/form-array/form-array.component';
+import {FormArrayService} from './service/form-array-service/form-array.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,11 +38,14 @@ import { DebugFormComponent } from './components/shared/debug-form/debug-form.co
     NameEditorComponent,
     ProfileEditorComponent,
     ApiConnectComponent,
-    DebugFormComponent
+    DebugFormComponent,
+    ExpansionPanelComponent,
+    FormArrayComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MatToolbarModule,
     MatListModule,
@@ -47,7 +55,8 @@ import { DebugFormComponent } from './components/shared/debug-form/debug-form.co
     MatSelectModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
