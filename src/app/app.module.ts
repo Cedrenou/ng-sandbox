@@ -27,6 +27,8 @@ import { ExpansionPanelComponent } from './components/shared/expansion-panel/exp
 import { FormArrayComponent } from './components/form-array/form-array.component';
 import {FormArrayService} from './service/form-array-service/form-array.service';
 import {HttpClientModule} from '@angular/common/http';
+import { ConsoleLogComponent } from './components/console-log/console-log.component';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import {HttpClientModule} from '@angular/common/http';
     ApiConnectComponent,
     DebugFormComponent,
     ExpansionPanelComponent,
-    FormArrayComponent
+    FormArrayComponent,
+    ConsoleLogComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatInputModule,
     MatExpansionModule,
     MatTableModule,
-    MatRadioModule
+    MatRadioModule,
+    GraphQLModule
   ],
   providers: [],
   bootstrap: [AppComponent]
