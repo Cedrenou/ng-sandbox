@@ -24,18 +24,11 @@ export class X01Component implements OnInit {
   soustractValue(value) {
     let result = this.scoreToBeat;
     result = result - value;
-    if (this.scoreToBeat < 0) {
+    if (this.scoreToBeat < 0 || value > this.scoreToBeat) {
       return;
     }
     this.scoreToBeat = result;
-    console.log(result);
     return result;
   }
-
-  consoleLog() {
-    const formValue = this.gameStyle.value;
-    console.log(formValue);
-  }
-
 
 }

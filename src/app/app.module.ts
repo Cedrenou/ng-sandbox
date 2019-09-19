@@ -25,10 +25,10 @@ import { ApiConnectComponent } from './components/api-connect/api-connect.compon
 import { DebugFormComponent } from './components/shared/debug-form/debug-form.component';
 import { ExpansionPanelComponent } from './components/shared/expansion-panel/expansion-panel.component';
 import { FormArrayComponent } from './components/form-array/form-array.component';
-import {FormArrayService} from './service/form-array-service/form-array.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ConsoleLogComponent } from './components/console-log/console-log.component';
 import { GraphQLModule } from './graphql.module';
+import {DartRankingComponent} from './components/dart-ranking/dart-ranking.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +40,7 @@ import { GraphQLModule } from './graphql.module';
     NameEditorComponent,
     ProfileEditorComponent,
     ApiConnectComponent,
+    DartRankingComponent,
     DebugFormComponent,
     ExpansionPanelComponent,
     FormArrayComponent,

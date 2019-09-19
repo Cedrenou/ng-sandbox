@@ -1,0 +1,15 @@
+<app-debug-form [form]="newPlayerForm"></app-debug-form>
+
+<form [formGroup]="newPlayerForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput formControlName="firstName" placeholder="Prénom" >
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput formControlName="lastName" placeholder="Nom">
+  </mat-form-field>
+  <button type="submit" mat-button>Ajouter un joueur</button>
+</form>
+
+<div class="drag" cdkDrag>
+  Drag me around
+</div>
