@@ -1,0 +1,50 @@
+<app-debug-form [form]="garantieForm"></app-debug-form>
+
+<!-- This is the master form -->
+<form [formGroup]="garantieForm">
+  <!-- I use FormArray to create multiple, smaller forms' -->
+  <ng-container formArrayName="garantie">
+
+    <mat-table [dataSource]="garanties" class="mat-elevation-z8 tableau">
+
+      <!-- Name -->
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}}</mat-cell>
+      </ng-container>
+
+      <!-- formuleOne -->
+      <ng-container matColumnDef="formuleOne">
+        <mat-header-cell *matHeaderCellDef>formuleOne</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <mat-checkbox formControlName="formuleOne" [checked]="element.formuleOne"></mat-checkbox>
+        </mat-cell>
+      </ng-container>
+
+      <!-- formuleTwo -->
+      <ng-container matColumnDef="formuleTwo">
+        <mat-header-cell *matHeaderCellDef>formuleTwo</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <mat-checkbox formControlName="formuleTwo" [checked]="element.formuleTwo"></mat-checkbox>
+        </mat-cell>
+      </ng-container>
+
+      <!-- formuleThree -->
+      <ng-container matColumnDef="formuleThree">
+        <mat-header-cell *matHeaderCellDef>formuleThree</mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <mat-checkbox formControlName="formuleThree" [checked]="element.formuleThree"></mat-checkbox>
+        </mat-cell>
+      </ng-container>
+
+      <!-- infoComplementaire -->
+      <ng-container matColumnDef="infoComplementaire">
+        <mat-header-cell *matHeaderCellDef>infoComplementaire</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.infoComplementaire}}</mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </ng-container>
+</form>

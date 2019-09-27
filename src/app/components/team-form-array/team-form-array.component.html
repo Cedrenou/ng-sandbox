@@ -1,0 +1,20 @@
+<app-debug-form [form]="teamForm"></app-debug-form>
+
+<!-- this is the master form -->
+<form [formGroup]="teamForm">
+
+  <!-- Ue formArray to creare multiple, smaller forms' -->
+  <div formArrayName="memberDetails">
+    <div *ngFor="let single of allTeamDetails; let $index=index">
+      <div [formGroupName]="$index">
+        <!-- your field properties of every repeted items -->
+        <div>
+          <input matInput placeholder="First Name" type="text" formControlName="firstName">
+        </div>
+        <div>
+          <input matInput placeholder="Last Name" type="text" formControlName="lastName">
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
