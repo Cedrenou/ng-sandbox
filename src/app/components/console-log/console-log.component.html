@@ -1,6 +1,37 @@
-<button (click)="sayHello('Cedric')">Say hello</button>
-<button (click)="sayHello('Ben')">Say hello</button>
-<button (click)="sayHello('Jean')">Say hello</button>
-<button (click)="sayHello()">No name</button>
-<button (click)="tableLog()">Table log</button>
-<button (click)="consoleGroup()">Group log</button>
+<div class="container">
+  <ul>
+    <li>
+      <button mat-raised-button
+              matTooltip="tooltip"
+              color="primary"
+              (click)="sayHello('Cedric')">Say hello Cedric</button>
+    </li>
+    <li>
+      <button mat-raised-button
+              color="primary"
+              (click)="sayHello('Ben')">Say hello Ben</button>
+    </li>
+    <li>
+      <button mat-raised-button
+              color="primary"
+              (click)="sayHello('Jean')">Say hello Jean</button>
+    </li>
+    <li>
+      <button mat-raised-button
+              color="warn"
+              (click)="sayHello()">No name return warn</button>
+    </li>
+    <li>
+      <button mat-raised-button
+              color="accent"
+              (click)="tableLog()">Table log</button>
+    </li>
+    <li>
+      <button mat-raised-button
+              color="accent"
+              (click)="consoleGroup()">Group log</button>
+    </li>
+  </ul>
+</div>
+
+

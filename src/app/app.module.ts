@@ -7,27 +7,29 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HomeComponent} from './components/home/home.component';
 import {NotFoundComponent} from './components/not-found/not-found.component';
 import {
-  MatButtonModule, MatExpansionModule,
+  MatButtonModule,
+  MatExpansionModule,
   MatFormFieldModule,
   MatInputModule,
-  MatListModule, MatRadioModule,
+  MatListModule,
+  MatRadioModule,
   MatSelectModule,
-  MatSidenavModule, MatTableModule,
-  MatToolbarModule
+  MatSidenavModule,
+  MatTableModule,
+  MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 
-import { X01Component } from './components/x01/x01.component';
+import {X01Component} from './components/x01/x01.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { ReactiveFormsComponent } from './components/reactive-forms/reactive-forms.component';
-import { NameEditorComponent } from './components/reactive-forms/name-editor/name-editor.component';
-import { ProfileEditorComponent } from './components/reactive-forms/profile-editor/profile-editor.component';
-import { ApiConnectComponent } from './components/api-connect/api-connect.component';
-import { DebugFormComponent } from './components/shared/debug-form/debug-form.component';
-import { ExpansionPanelComponent } from './components/shared/expansion-panel/expansion-panel.component';
-import { FormArrayComponent } from './components/form-array/form-array.component';
+import {ReactiveFormsComponent} from './components/reactive-forms/reactive-forms.component';
+import {NameEditorComponent} from './components/reactive-forms/name-editor/name-editor.component';
+import {ProfileEditorComponent} from './components/reactive-forms/profile-editor/profile-editor.component';
+import {ApiConnectComponent} from './components/api-connect/api-connect.component';
+import {DebugFormComponent} from './components/shared/debug-form/debug-form.component';
+import {ExpansionPanelComponent} from './components/shared/expansion-panel/expansion-panel.component';
+import {FormArrayComponent} from './components/form-array/form-array.component';
 import {HttpClientModule} from '@angular/common/http';
-import { ConsoleLogComponent } from './components/console-log/console-log.component';
-import { GraphQLModule } from './graphql.module';
+import {ConsoleLogComponent} from './components/console-log/console-log.component';
 import {DartRankingComponent} from './components/dart-ranking/dart-ranking.component';
 
 @NgModule({
@@ -62,7 +64,7 @@ import {DartRankingComponent} from './components/dart-ranking/dart-ranking.compo
     MatExpansionModule,
     MatTableModule,
     MatRadioModule,
-    GraphQLModule
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
