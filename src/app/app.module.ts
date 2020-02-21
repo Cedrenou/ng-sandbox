@@ -9,7 +9,7 @@ import {NotFoundComponent} from './components/not-found/not-found.component';
 import {
   MatButtonModule,
   MatExpansionModule,
-  MatFormFieldModule,
+  MatFormFieldModule, MatIconModule,
   MatInputModule,
   MatListModule,
   MatRadioModule,
@@ -64,7 +64,8 @@ import {DartRankingComponent} from './components/dart-ranking/dart-ranking.compo
     MatExpansionModule,
     MatTableModule,
     MatRadioModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
